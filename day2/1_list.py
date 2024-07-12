@@ -1,5 +1,6 @@
 #!usr/bin/python
 # -*- coding: UTF-8 -*-
+# ！！！！列表使用[]
 import sys
 list1 = [1, 3, 5, 7, 100]
 print(list1) # [1, 3, 5, 7, 100]
