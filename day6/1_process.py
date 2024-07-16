@@ -20,6 +20,17 @@ GIL规定，在一个进程中每次只能有一个线程在运行。这个GIL�
 正是因为有GIL的存在，python的多线程其实是假的，所以才有人说python的多线程非常鸡肋。但是虽然每个进程有一个GIL锁，进程和进程之前还是不受影响的。
 
 GIL是个历史遗留问题，过去的版本迭代都是以GIL为基础来的，想要去除GIL还真不是一件容易的事，所以我们要做好和GIL长期面对的准备。
+
+
+看一下Process类的构造方法：
+__init__(self, group=None, target=None, name=None, args=(), kwargs={})
+
+group：进程所属组（基本不用） 
+target：表示调用对象
+args：表示调用对象的位置参数元组
+name：别名 
+kwargs：表示调用对象的字典
+
 """
 from multiprocessing import Process
 from os import getpid
